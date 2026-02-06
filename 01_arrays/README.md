@@ -2,8 +2,11 @@
 
 ## Concepts
 
-- Creating Arrays
-- Accessing and Writing Array Elements
+ * - Creating Arrays
+ * - Accessing and Writing Array Elements
+ * - Shallow vs deep copy 
+ * - Searching arrays
+ * - String representations of arrays
 
 ## Operations & Big-O
 
