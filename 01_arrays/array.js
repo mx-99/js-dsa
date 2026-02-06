@@ -61,3 +61,83 @@ function createArrayFromString() {
 }
 
 // createArrayFromString();
+
+// Shallow Copy
+
+function shallowCopyExample() {
+  const nums = [];
+  for (let i = 0; i < 10; i++) {
+    nums[i] = i + 1;
+  }
+
+  const sameNums = nums; // reference copy
+  nums[0] = 99;
+
+  console.log(nums);
+  console.log(sameNums);
+}
+
+// shallowCopyExample();
+
+// Deep Copy 
+
+function copyArray(source, target) {
+  for (let i = 0; i < source.length; i++) {
+    target[i] = source[i];
+  }
+}
+
+function deepCopyExample() {
+  const nums = [1, 3, 4, 5, 6, 7, 8, 9, 10];
+  const savedNums = [];
+
+  copyArray(nums, savedNums);
+  nums[1] = 2;
+
+  console.log("nums[1]:", nums[1]);
+  console.log("savedNums[1]:", savedNums[1]);
+}
+
+// deepCopyExample();
+
+// Searching Arrays
+
+const readline = require("readline");
+
+function searchArray() {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  const names = ["aa", "bb", "cc", "aa"];
+
+  rl.question("Enter a name to search: ", (input) => {
+    const position = names.indexOf(input);
+
+    if (position >= 0) {
+      console.log(`Found "${input}" at index ${position}`);
+    } else {
+      console.log(`"${input}" not found`);
+    }
+
+    console.log("First index of 'aa':", names.indexOf("aa"));
+    console.log("Last index of 'aa':", names.lastIndexOf("aa"));
+
+    rl.close();
+  });
+}
+
+// searchArray();
+
+// String Representation of Arrays
+
+function stringRepresentations() {
+  const names = ["a", "b", "c", "d"];
+
+  console.log(names);
+  console.log(names.join());
+  console.log(names.toString());
+}
+
+stringRepresentations();
