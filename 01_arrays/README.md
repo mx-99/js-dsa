@@ -2,11 +2,12 @@
 
 ## Concepts
 
- * - Creating Arrays
- * - Accessing and Writing Array Elements
- * - Shallow vs deep copy 
- * - Searching arrays
- * - String representations of arrays
+- - Creating Arrays
+- - Accessing and Writing Array Elements
+- - Shallow vs deep copy
+- - Searching arrays
+- - String representations of arrays
+- - Mutator Functions(concat, splice and pop)
 
 ## Operations & Big-O
 
