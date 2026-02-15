@@ -4,17 +4,17 @@ function arrayBasics() {
   const emptyArray = [];
   const numbers = [1, 2, 3, 4];
   const mixedArray = ["a", 2, true, null];
-  const singleLengthArray = new Array(6);
+  const arrayConstructor = new Array(6, 6);
 
   console.log(emptyArray.length);
   console.log(numbers.length);
   console.log(mixedArray.length);
-  console.log(singleLengthArray.length);
+  console.log(arrayConstructor);
   console.log(Array.isArray(mixedArray));
   console.log(Array.isArray(2));
 }
 
-// arrayBasics();
+//arrayBasics();
 
 // Accessing & Writing Elements
 
@@ -37,7 +37,7 @@ function sumArrayElements() {
 // sumArrayElements();
 
 function sumUsingLoop() {
-  const nums = [1,2,3,4,5,6,7,8,9,10];
+  const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   let sum = 0;
 
   for (let i = 0; i < nums.length; i++) {
@@ -79,7 +79,7 @@ function shallowCopyExample() {
 
 // shallowCopyExample();
 
-// Deep Copy 
+// Deep Copy
 
 function copyArray(source, target) {
   for (let i = 0; i < source.length; i++) {
@@ -140,4 +140,49 @@ function stringRepresentations() {
   console.log(names.toString());
 }
 
-stringRepresentations();
+//stringRepresentations();
+
+//Creating New Arrays from Existing Arrays
+function concatFn() {
+  let a = ["a", "b", "c"];
+  let b = ["d", "e", "f"];
+  let c = a.concat(b);
+  console.log(c);
+}
+
+// concatFn();
+
+function spliceFn() {
+  const a = ["a", "b", "c", "d", "e"];
+  let b = a.splice(1, 4);
+  console.log(b);
+}
+//spliceFn();
+
+//Mutator Functions
+
+function addingArrayElements() {
+  //push
+  const numbers = [1, 2, 3, 4, 5];
+  console.log(numbers);
+  numbers.push(6);
+  console.log("push", numbers);
+  //length
+  numbers[numbers.length] = 7;
+  console.log("length", numbers);
+  console.log("array Elements length", numbers.length);
+  //Add Element in the beginning without using unshift
+  console.log("Add Element in the beginning without using unshift");
+  let nums = [2, 3, 4, 5];
+  let newN = 1;
+  let n = nums.length;
+  for (let i = n; i >= 0; --i) {
+    nums[i] = nums[i - 1];
+    // console.log(nums);
+  }
+  nums[0] = newN;
+  console.log("Adding at the beginning", nums);
+  //unshift
+  console.log("unshift ");
+}
+addingArrayElements();
