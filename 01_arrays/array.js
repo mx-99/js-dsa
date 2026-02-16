@@ -184,5 +184,99 @@ function addingArrayElements() {
   console.log("Adding at the beginning", nums);
   //unshift
   console.log("unshift ");
+  console.log(nums);
+  let n1 = 0;
+  nums.unshift(n1);
+  console.log(nums);
+  let n2 = 8;
+  nums.unshift(n2, 9, 45);
+  console.log(nums);
 }
-addingArrayElements();
+//addingArrayElements();
+
+//Removing Elements from an Arrays
+
+function removingArrayElement() {
+  const nums = [1, 2, 3, 4, 5, 6];
+  //pop
+  console.log(nums);
+  nums.pop();
+  console.log(nums);
+  //without pop
+  let numbers = [5, 1, 2, 3, 4];
+  console.log(numbers);
+  for (let i = 0; i < numbers.length; ++i) {
+    numbers[i] = numbers[i + 1];
+    console.log("i", i);
+  }
+  console.log(numbers);
+
+  //shift
+  let n = [6, 1, 2, 3, 4, 5];
+  console.log(n);
+  n.shift();
+  console.log(n);
+
+  //removed values
+  let arr1 = [1, 2, 3, 4, 5];
+  console.log(arr1);
+  let val1 = arr1.pop();
+  let val2 = arr1.unshift();
+  console.log(`value 1 =: ${val1} value 2 =: ${val2}`);
+}
+//removingArrayElement();
+
+//Adding and Removing Elements from the Middle of an Arrays
+function middleOfArray() {
+  //adding
+  let numbers = [1, 2, 3, 4, 5];
+  console.log(numbers);
+  let newElem = [6, 7, 8, 9];
+  numbers.splice(5, 0, newElem);
+  console.log(numbers);
+  numbers.splice(9, 0, 10, 11);
+  console.log(numbers);
+  //Removing
+  let n = [1, 2, 3, 10, 20, 30, 4, 5];
+  console.log(n);
+  n.splice(3, 3);
+  console.log(n);
+}
+//middleOfArray();
+
+//Putting Array Elements in Order
+//reverse
+function reverseFn() {
+  let arr = [1, 2, 3, 4, 5];
+  console.log(arr);
+  arr.reverse();
+  console.log(arr);
+
+  let a = ["abc", "b", "c"];
+  console.log(a);
+  a.reverse();
+  console.log(a);
+}
+//reverseFn();
+
+//sort
+function compare(a, b) {
+  return a - b;
+}
+function sortFn() {
+  //sorting strings
+  let a = ["abc", "ghj", "def", "kjhd"];
+  console.log(a);
+  a.sort();
+  console.log(a);
+  //sorting numbers
+  let n = [1, 2, 100, 4, 3, 5];
+  console.log(n);
+  n.sort();
+  console.log(n);
+  let b = [1, 2, 100, 4, 3, 5];
+  console.log(b);
+  b.sort(compare);
+  console.log(b);
+}
+sortFn();
