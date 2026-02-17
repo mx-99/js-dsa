@@ -7,7 +7,7 @@
 - - Shallow vs deep copy
 - - Searching arrays
 - - String representations of arrays
-- - Mutator Functions(concat, splice, push, unshift, pop, shit, reverse, and sort)
+- - Mutator Functions(concat, splice, push, unshift, pop, shit, reverse, sort, forEach, every and some)
 
 ## Operations & Big-O
 
