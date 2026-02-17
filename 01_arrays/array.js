@@ -279,4 +279,52 @@ function sortFn() {
   b.sort(compare);
   console.log(b);
 }
-sortFn();
+//sortFn();
+
+//Iterator Functions
+
+function forEachFn() {
+  let numbers = [1, 2, 3, 4, 5];
+  function square(num) {
+    console.log(num, num * num);
+  }
+
+  numbers.forEach(square);
+}
+
+//forEachFn();
+function isEven(n) {
+  return n % 2 == 0;
+}
+function everyFn() {
+  let n = [2, 4, 6, 8];
+  let n1 = [1, 3, 5, 7, 9];
+
+  let even = n.every(isEven);
+  console.log(even);
+  if (even) {
+    console.log("even");
+  } else {
+    console.log("not all numbers are even");
+  }
+
+  let odd = n1.every(isEven);
+  if (odd) {
+    console.log("even");
+  } else {
+    console.log("not all numbers are even");
+  }
+}
+
+//everyFn();
+
+//some
+function somefn() {
+  let n = [1, 2, 3, 4, 5, 6, 7, 8];
+  if (n.some(isEven)) {
+    console.log("Some are even");
+  } else {
+    console.log("no numbers are even");
+  }
+}
+somefn();
