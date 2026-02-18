@@ -326,5 +326,50 @@ function somefn() {
   } else {
     console.log("no numbers are even");
   }
+  let n1 = [1, 3, 5, 7, 9];
+  if (n1.some(isEven)) {
+    console.log("Some are even");
+  } else {
+    console.log("no numbers are even");
+  }
 }
-somefn();
+//somefn();
+
+//reduce
+
+function reduceFn() {
+  function add(total, currentV) {
+    return total + currentV;
+  }
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  let some = arr.reduce(add);
+  console.log(some);
+  function concat(a, b) {
+    return a + b;
+  }
+  let a = ["a", "b", "c", "d"];
+  console.log(a);
+  let b = a.reduce(concat);
+  console.log(b);
+  let c = a.reduceRight(concat);
+  console.log(c);
+}
+//reduceFn();
+
+//map
+function mapFn() {
+  function add(a) {
+    return (a += 5);
+  }
+  let n = [1, 2, 3, 4, 5];
+  console.log(n);
+  let a = n.map(add);
+  console.log(a);
+  function first(a) {
+    return a[0];
+  }
+  let arr = ["for", "your", "info"];
+  let b = arr.map(first);
+  console.log(b.join(""));
+}
+mapFn();
