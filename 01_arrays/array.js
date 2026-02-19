@@ -372,4 +372,26 @@ function mapFn() {
   let b = arr.map(first);
   console.log(b.join(""));
 }
-mapFn();
+//mapFn();
+
+//filter
+function filterFn() {
+  function isEven(n) {
+    return n % 2 == 0;
+  }
+  function isOdd(n) {
+    return n % 2 != 0;
+  }
+  let num = [];
+  for (let i = 0; i < 20; ++i) {
+    num[i] = i + 1;
+  }
+  console.log(num);
+  let evan = num.filter(isEven);
+  console.log("print evan");
+  console.log(evan);
+  let odd = num.filter(isOdd);
+  console.log("print odd");
+  console.log(odd);
+}
+filterFn();
