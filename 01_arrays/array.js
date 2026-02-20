@@ -98,6 +98,7 @@ function deepCopyExample() {
   console.log("savedNums[1]:", savedNums[1]);
 }
 
+const { trace } = require("console");
 // deepCopyExample();
 
 // Searching Arrays
@@ -393,5 +394,26 @@ function filterFn() {
   let odd = num.filter(isOdd);
   console.log("print odd");
   console.log(odd);
+  function passing(n) {
+    return n >= 60;
+  }
+  let g = [];
+  for (let i = 0; i < 20; ++i) {
+    g[i] = Math.floor(Math.random() * 101);
+  }
+  let pg = g.filter(passing);
+  console.log("all grades", g);
+  console.log("passing grades", pg);
+
+  function afterC(str) {
+    if (str.indexOf("cie") > -1) {
+      return true;
+    }
+    return false;
+  }
+
+  let words = ["recieve", "deceive", "percieve", "deceit", "concieve"];
+  let misspelled = words.filter(afterC);
+  console.log(misspelled);
 }
 filterFn();
